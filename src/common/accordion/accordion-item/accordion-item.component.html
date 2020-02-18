@@ -1,0 +1,14 @@
+<div class="accordion-item" [ngClass]="{
+  'accordion-item--isOpen': state == 'isOpen',
+  'accordion-item--isClose': state == 'isClose'
+}">
+  <div class="accordion-item-header" (click)="onClickHeader()">
+    <div>
+      <ng-content select=".header-title"></ng-content>
+      <span class="float-right link" [@accordionItemContentAnimation]="state">{{isOpen ? '-' : '+'}}</span>
+    </div>
+  </div>
+  <div class="accordion-item-content" [@accordionItemContentAnimation]="state">
+    <ng-content select=".accordion-item-content"></ng-content>
+  </div>
+</div>

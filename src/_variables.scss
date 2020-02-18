@@ -1,0 +1,17 @@
+/* Text Specific Colors */
+$heading-color: #201C3F;
+$text-color: #787878;
+$grey-color: #F8F8F8;
+
+/* Border Specific Colors */
+$border-color: rgb(97,96,132,.5);
+$border: 1px solid $border-color;
+
+/* Grid Breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

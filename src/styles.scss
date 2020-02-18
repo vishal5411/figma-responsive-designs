@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+@import "_variables";
+@import "grid";
+@import "reset";
+
+body {
+  font-size: 14px;
+  line-height: 145.7%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.heading {
+  color: $heading-color;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5, p {
+  font-size: 14px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+
+.custom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .nav-item {
+    .nav-link {
+      display: block;
+      font-size: 18px;
+      color: $heading-color;
+      font-family: Assistant;
+      font-weight: bold;
+      padding: 15px 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+a {
+  color: $heading-color !important;
+
+  &.active, &.hover, &:visited, &:focus {
+    color: $heading-color !important;
+  }
+}
+
+.title {
+  font-family: Assistant;
+  line-height: 31px;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: $heading-color;
+}
+
+
+.accordion {
+  .accordion-item {
+    margin: 20px 0px;
+    color: $heading-color;
+  }
+
+  .accordion-item-header {
+    background: transparent;
+    cursor: pointer;
+    padding: 20px 0px;
+    border-bottom: 1px solid $border-color;
+
+    .header-title, .link {
+      font-family: Assistant;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 63px;
+    }
+  }
+
+  .accordion-item-content {
+    height: auto;
+    color: $text-color;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+}
+

@@ -1,0 +1,56 @@
+@import "src/variables";
+
+#footer {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row;
+  background: linear-gradient(180deg, #F8C5E0 0%, #D1D8EE 83.33%);
+  padding: 30px 30px;
+  margin-top: auto;
+  @media screen and (max-width: map_get($grid-breakpoints, sm)) {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+
+    h1 {
+      padding-bottom: 20px;
+      text-align: left;
+      @media screen and (max-width: map_get($grid-breakpoints, sm)) {
+        text-align: center;
+      }
+    }
+
+    p {
+      //padding-top: 20px;
+      //display: inline !important;
+      @media screen and (max-width: map_get($grid-breakpoints, sm)) {
+        display: inline-flex;
+        text-align: center;
+        line-height: 1;
+      }
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    flex-grow: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    .custom-nav {
+      justify-content: flex-end;
+      @media screen and (max-width: map_get($grid-breakpoints, sm)) {
+        margin-top: 20px;
+        justify-content: center;
+      }
+    }
+  }
+
+}

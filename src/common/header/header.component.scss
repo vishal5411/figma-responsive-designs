@@ -1,0 +1,124 @@
+@import "src/_variables";
+
+#header {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url('/assets/main-bg.jpeg');
+  background-repeat: no-repeat;
+  background-position:  0% 60%;
+  background-size: 95%;
+  margin-bottom: 20px;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 30%;
+    margin: 30px 30px;
+    color: $heading-color;
+
+    h1 {
+      padding-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  .menu-links {
+    display: flex;
+    //flex-grow: 1;
+    margin: auto 30px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    .custom-nav {
+      justify-content: flex-end;
+
+      .nav-link {
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+
+    }
+  }
+
+  .header-banner {
+    display: flex;
+    flex: 0 1 100%;
+    height: 700px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 30px;
+
+    .text {
+      font-size: 250px;
+      font-family: Assistant;
+      font-weight: 800;
+      line-height: 89.4%;
+      color: $heading-color;
+    }
+  }
+
+}
+@media screen and (max-width: map_get($grid-breakpoints, sm)) {
+  #header {
+    .header-banner {
+      .text {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map_get($grid-breakpoints, md)) {
+  #header {
+    flex-direction: column;
+    background-position:  0% 20%;
+    background-size: 95%;
+    justify-content: center;
+
+    .logo {
+      margin: 0px;
+      padding: 0px;
+      flex: auto;
+      //flex-shrink: 1;
+
+      h1 {
+        padding: 7.5px 0px;
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+
+    .menu-links {
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      margin: 0px;
+
+      .custom-nav {
+        justify-content: center;
+
+        .nav-link {
+          margin-left: auto;
+          margin-right: auto;
+          //margin-left: 10px;
+          //padding: 7.5px;
+          //margin: 0px;
+          font-size: 10px;
+        }
+      }
+    }
+    .header-banner {
+      .text {
+        font-size: 50px;
+      }
+    }
+  }
+
+}
